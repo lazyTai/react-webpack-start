@@ -1,5 +1,5 @@
 const webpack = require('webpack')
-
+var postcss = require('postcss-loader')
 
 const config = {
     watch: true,
@@ -28,7 +28,23 @@ const config = {
                 test: /\.css$/,
                 exclude: [/node_modules/],
                 use: [
-                    'style-loader', 'css-loader',
+                    'style-loader', {
+                        loader: 'css-loader',
+                        options: {
+                            modules: true,
+                            localIdentName: '[name]__[local]___[hash:base64:5]'
+                        }
+                    },
+                    {
+                        loader: "postcss-loader",
+                        options: {
+
+                            plugins: (loader) => [
+                                require('precss')(),
+                                require('autoprefixer')(), //CSS浏览器兼容
+                            ]
+                        }
+                    }
                 ]
             },
             {

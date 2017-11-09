@@ -1,0 +1,16 @@
+@import './root.css';
+
+.pick_calendar{
+    display: flex;
+    cursor: pointer;
+}
+.icon_calendar{
+    padding-right:8px; 
+    }
+    .calendar_time:hover{
+        color:$blue;
+    }
+
+body{
+    background: #eee;
+}

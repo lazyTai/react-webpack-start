@@ -8,7 +8,6 @@ module.exports = App */
 
 
 /* 开发 */
-import ReactComponent from './react-component.min'
-console.log(ReactComponent)
-ReactDOM.render(<ReactComponent />, document.querySelector('#root'))
+import App from './app'
+ReactDOM.render(<App />, document.querySelector('#root'))
 

@@ -1,9 +1,12 @@
 {
-  "name": "react-webpack-start",
+  "name": "select",
   "version": "1.0.0",
   "description": "",
   "main": "gulpfile.js",
-  "scripts": {},
+  "scripts": {
+    "dev":"webpack --config webpack.config.dev.js",
+    "build":"webpack --config webpack.config.pro.js"
+  },
   "author": "",
   "license": "ISC",
   "devDependencies": {
@@ -27,6 +30,7 @@
     "gulp-util": "^3.0.8",
     "gulp-webpack": "^1.5.0",
     "postcss-loader": "^2.0.8",
+    "precss": "^2.0.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "sass-loader": "^6.0.6",
