@@ -27,11 +27,19 @@ const config = {
             {
                 test: /\.css$/,
                 exclude: [/node_modules/],
-                loader: 'style!css'
+                use: [
+                    'style-loader', 'css-loader',
+                ]
+            },
+            {
+                test: /\.scss$/,
+                loader: 'style-loader!css-loader!sass-loader'
             }
         ]
     },
-    plugins: []
+    plugins: [
+
+    ]
 }
 
 module.exports = config;
